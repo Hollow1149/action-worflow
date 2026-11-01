@@ -1,0 +1,10 @@
+name: demo-action
+run-name: ${{ github.actor }} demo-actions
+on: [push]
+jobs:
+  Setup-Initial-GitAction:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Triggered by ${{ github.event_name }} event."
+      - run: echo "Your OS is ${{ runner.os }}."
+      - run: echo "Workflow test on brach ${{github.ref }} in repository: ${{ github.repository }}."
